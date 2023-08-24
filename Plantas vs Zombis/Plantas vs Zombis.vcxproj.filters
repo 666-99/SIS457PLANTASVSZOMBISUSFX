@@ -99,6 +99,12 @@
     <ClInclude Include="BarraDeProgresoFuego.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="proyectilSandia.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="proyectilSandiaHielo.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SpawnerDeMoneda.cpp">
@@ -186,6 +192,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="BarraDeProgresoFuego.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="proyectilSandia.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="proyectilSandiaHielo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,7 +9,7 @@ BarraDeProgreso::BarraDeProgreso()
 
 void BarraDeProgreso::iniciar() {
 	//codigo
-	cout << "la barra de progreso se esta iniciando";
+	cout << "la barra de progreso se esta iniciando"<<endl;
 }
 
 void BarraDeProgreso::velocidad() {

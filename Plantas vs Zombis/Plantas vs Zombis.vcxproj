@@ -146,6 +146,8 @@
     <ClInclude Include="Planta.h" />
     <ClInclude Include="Podadora.h" />
     <ClInclude Include="Proyectil.h" />
+    <ClInclude Include="proyectilSandia.h" />
+    <ClInclude Include="proyectilSandiaHielo.h" />
     <ClInclude Include="Rastrillo.h" />
     <ClInclude Include="Sol.h" />
     <ClInclude Include="SpawnerDeMoneda.h" />
@@ -177,6 +179,8 @@
     <ClCompile Include="Podadora.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Proyectil.cpp" />
+    <ClCompile Include="proyectilSandia.cpp" />
+    <ClCompile Include="proyectilSandiaHielo.cpp" />
     <ClCompile Include="Rastrillo.cpp" />
     <ClCompile Include="Sol.cpp" />
     <ClCompile Include="SpawnerDeMoneda.cpp" />

@@ -5,6 +5,7 @@
 #include "GameManager.h"
 #include "Escenario.h"
 #include "BarraDeProgreso.h"
+#include "Proyectil.h"
 using namespace std;
 
 int main() {
@@ -18,6 +19,9 @@ int main() {
 	BarraDeProgreso aumento;
 	aumento.finalizar();
 	aumento.iniciar();
+
+	Proyectil guisante;
+	guisante.visualizarProyectil();
 	
 	return 0;
 
