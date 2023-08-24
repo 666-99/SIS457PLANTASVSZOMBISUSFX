@@ -5,26 +5,37 @@ using namespace std;
 
 class Planta
 {
-	//propiedades o atributos
-	string nombre;
-	int tamaño;//(alto y ancho)
-	int Vida; //resistencia de 5 mordiscos de zombi
-	int posicion = 5;
-	string color;
-	int costo; //soles
-	char tipoPlanta; //girasol,, lanzaguisantes,.........
-	int rangoAtaque;
-	int tiempoRecarga;
-	char habilidad;
+private:
+	int energia = 100;
+	int ataque = 10;
 
-	//metodos o funciones
-	void mover();
+	string tipoPlanta;
+	string nombre;
+
+
+
+public:
+	//Contructores
+	Planta();
+	Planta(string _nombre);
+	Planta(string _nombre, int _energia, int _ataque, string _tipoPlanta);
+
+	//Metodos accesores
+	void setEnergia(int _energia) { energia = _energia; }
+	int getEnergia() { return energia; }
+
+	void setAtaque(int _ataque) { ataque = _ataque; }
+	int getAtaque() { return ataque; }
+
+	void setNombre(string _nombre) { nombre = _nombre; }
+	string getNombre() { return nombre; }
+
+	void setTipoPlanta(string _tipoPlanta) { tipoPlanta = _tipoPlanta; }
+	string getTipoPlanta() { return tipoPlanta; }
+
+	//Metodos propios
+
 	void atacar();
-	void defender();
-	void recibirDanio();
-	void crecer();
-	void producirRecursos(); //soles, monedas
-	void realizarHabilidad();
-	void morir(); //termina su numero de vidas
+	void morir();
 };
 
