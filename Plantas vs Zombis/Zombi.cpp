@@ -1,29 +1,61 @@
-#include "Zombi.h"
+#include "Zombie.h"
 
-void Zombi::mover() {
-	//codigo
+Zombie::Zombie()
+{
+	//energia = 100;
+	nivelFuria = 20;
+	velocidad = 30;
+	posicionX = 1000.0f;
+	posicionY = 540.0f;
+	tipoZombie = "Zombie normal";
+	nombre = "Zombie anonimo";
 }
 
-void Zombi::atacar() {
-	//codigo
+Zombie::Zombie(string _nombre)
+{
+	//energia = 100;
+	nivelFuria = 20;
+	velocidad = 30;
+	posicionX = 1000.0f;
+	posicionY = 540.0f;
+	tipoZombie = "Zombie normal";
+	nombre = _nombre;
 }
 
-void Zombi::aumentarVelocidad() {
-	//codigo
+Zombie::Zombie(string _nombre, int _energia, int _nivelFuria, int _velocidad, float _posicionX, float _posicionY, string _tipoZombie)
+{
+	energia = _energia;
+	nivelFuria = _nivelFuria;
+	velocidad = _velocidad;
+	posicionX = _posicionX;
+	posicionY = _posicionY;
+	tipoZombie = _tipoZombie;
+	nombre = _nombre;
 }
 
-void Zombi::recibirDanio() {
-	//codigo
+void Zombie::moverse()
+{
+	posicionX += velocidad;
+	posicionY += velocidad;
+
 }
 
-void Zombi::atacarConRecursos() {
-	//codigo
+void Zombie::moverse(float _posicionSiguienteX, float _posicionSiguienteY)
+{
 }
 
-void Zombi::realizarHabilidad() {
-	//codigo
+void Zombie::moverse(float _posicionFinalX, float _posicionFinalY, int _velocidad)
+{
 }
 
-void Zombi::morir() {
-	//codigo
+void Zombie::atacar()
+{
+}
+
+void Zombie::morir() {
+
+}
+
+void Zombie::morder()
+{
 }
