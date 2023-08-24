@@ -1,33 +1,33 @@
 #include "Planta.h"
 
-void Planta::mover() {
-	//codigo
+Planta::Planta()
+{
+	energia = 100;
+	ataque = 10;
+	tipoPlanta = "Planta comun";
+	nombre = "Planta anonima";
 }
 
+Planta::Planta(string _nombre)
+{
+	energia = 100;
+	ataque = 10;
+	tipoPlanta = "Planta normal";
+	nombre = _nombre;
+}
+
+Planta::Planta(string _nombre, int _energia, int _ataque, string _tipoPlanta)
+{
+	energia = _energia;
+	ataque = _ataque;
+	tipoPlanta = _tipoPlanta;
+	nombre = _nombre;
+}
 void Planta::atacar() {
-	//codigo
+	cout << " La planta esta atacando" << endl;
 }
-
-void Planta::defender() {
-	//codigo
-}
-
-void Planta::recibirDanio() {
-	//codigo
-}
-
-void Planta::crecer() {
-	//codigo
-}
-
-void Planta::producirRecursos() {
-	//codigo
-}
-
-void Planta::realizarHabilidad() {
-	//codigo
-}
-
 void Planta::morir() {
-	//codigo
+	cout << " Murio la planta" << endl;
 }
+
+
