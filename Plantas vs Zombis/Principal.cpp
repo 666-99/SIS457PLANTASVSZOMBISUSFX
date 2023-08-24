@@ -17,6 +17,7 @@ int main() {
 
 	BarraDeProgreso aumento;
 	aumento.finalizar();
+	aumento.iniciar();
 	
 	return 0;
 

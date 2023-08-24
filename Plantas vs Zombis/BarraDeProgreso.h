@@ -1,5 +1,6 @@
 #pragma once
-
+#include <iostream>
+using namespace std;
 class BarraDeProgreso
 {
 private:
@@ -7,7 +8,7 @@ private:
 	int posicion;
 	int tamanio;
 	int tiempo;
-	int color;
+	string color;
 
 public:
 	//constructor
@@ -23,8 +24,8 @@ public:
 	void setTiempo(int _tiempo) { tiempo = _tiempo; }
 	int getTiempo() { return tiempo; }
 
-	void SetColor(int _color) { color = _color; }
-	int getColor() { return color; }
+	void SetColor(string _color) { color = _color; }
+	string getColor() { return color; }
 
 
 

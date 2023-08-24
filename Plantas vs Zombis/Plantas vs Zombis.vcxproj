@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="BanderaDeOleada.h" />
     <ClInclude Include="BarraDeProgreso.h" />
+    <ClInclude Include="BarraDeProgresoFuego.h" />
     <ClInclude Include="Calle.h" />
     <ClInclude Include="Casa.h" />
     <ClInclude Include="Casilla.h" />
@@ -158,6 +159,7 @@
   <ItemGroup>
     <ClCompile Include="BanderaDeOleada.cpp" />
     <ClCompile Include="BarraDeProgreso.cpp" />
+    <ClCompile Include="BarraDeProgresoFuego.cpp" />
     <ClCompile Include="Calle.cpp" />
     <ClCompile Include="Casa.cpp" />
     <ClCompile Include="Casilla.cpp" />

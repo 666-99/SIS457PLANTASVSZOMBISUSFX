@@ -1,4 +1,11 @@
 #include "Menu.h"
+Menu::Menu()
+{
+	numeroOpcion = 3;
+    estado = 100;
+	seleccionarOpcion = 2;
+	fondo = 1;
+}
 
 void Menu::moverBarra() {
 	//codigo
