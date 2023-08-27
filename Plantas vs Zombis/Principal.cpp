@@ -80,10 +80,12 @@ int main() {
 	cout << "La dificultad del juego esta en: " << MiJuego.getDificultad() << endl;
 	MiJuego.actualizarPuntuación();
 	cout << endl;
-	int main() {
+	
 	Planta Sunflower;
 	Sunflower.atacar();
 	Sunflower.morir();
+	cout << endl;
+	
 	return 0;
 
 }
