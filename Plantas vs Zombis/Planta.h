@@ -5,7 +5,7 @@ using namespace std;
 
 class Planta
 {
-private:
+protected:
 	//propiedades o atributos
 	string nombre;
 	int tamanioAlto;
@@ -17,7 +17,7 @@ private:
 	int costo; //soles
 	string tipoPlanta; //girasol,, lanzaguisantes,.........
 	int rangoAtaque;
-	//int tiempoRecarga;
+	int tiempoRecarga;
 	string habilidad;
 
 public:
