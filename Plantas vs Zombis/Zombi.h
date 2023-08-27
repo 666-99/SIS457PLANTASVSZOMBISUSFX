@@ -5,7 +5,7 @@ using namespace std;
 
 class Zombi
 {
-private:
+protected:
 	//propiedades o atributos
 	string nombre;
 	float tamanioAlto;
