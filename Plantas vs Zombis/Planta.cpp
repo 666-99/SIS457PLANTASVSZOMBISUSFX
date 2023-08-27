@@ -1,33 +1,72 @@
 #include "Planta.h"
 
-Planta::Planta()
-{
-	energia = 100;
-	ataque = 10;
-	tipoPlanta = "Planta comun";
-	nombre = "Planta anonima";
+//METODOS CONSTRUCTORES------------------------------------------------------
+
+Planta::Planta() {
+	nombre = "Planta de monedas";
+	tamanioAlto = 7;
+	tamanioAncho = 2;
+	vida = 100;
+	posicionX = 110.0f;
+	posicionY = 50.0f;
+	color = "amarillo";
+	costo = 50;
+	tipoPlanta = "Planta girasol";
+	rangoAtaque = 3;
+	habilidad = "escudo";
 }
 
-Planta::Planta(string _nombre)
-{
-	energia = 100;
-	ataque = 10;
-	tipoPlanta = "Planta normal";
+Planta::Planta(string _nombre, int _vida, string _tipoPlanta, string _habilidad) {
 	nombre = _nombre;
-}
-
-Planta::Planta(string _nombre, int _energia, int _ataque, string _tipoPlanta)
-{
-	energia = _energia;
-	ataque = _ataque;
+	tamanioAlto = 5;
+	tamanioAncho = 1;
+	vida = _vida;
+	posicionX = 187.0f;
+	posicionY = 122.0f;
+	color = "rojo";
+	costo = 150;
 	tipoPlanta = _tipoPlanta;
-	nombre = _nombre;
+	rangoAtaque = 3;
+	habilidad = _habilidad;
 }
+
+//METODOS PROPIOS O COMUNES---------------------------------------------------
+
+void Planta::definirMovimientoConstante() {
+	//codigo
+}
+void Planta::definirMovimientoConstante(float posicionSiguienteX, float posicionSiguienteY) {
+	//cdigo
+}
+
 void Planta::atacar() {
-	cout << " La planta esta atacando" << endl;
+	//codigo
 }
+
+void Planta::defender() {
+	//codigo
+}
+
+void Planta::recibirDanio() {
+	//codigo
+}
+
+void Planta::crecer() {
+	//codigo
+}
+
+void Planta::producirRecursos() {
+	//codigo
+}
+
+void Planta::realizarHabilidad() {
+	//codigo
+}
+
 void Planta::morir() {
-	cout << " Murio la planta" << endl;
+	//codigo
 }
 
-
+void Planta::morir(int _energiaVida) {
+	//codigo
+}
