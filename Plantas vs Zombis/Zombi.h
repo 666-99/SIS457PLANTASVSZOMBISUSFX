@@ -3,58 +3,96 @@
 
 using namespace std;
 
-class Zombie
+class Zombi
 {
 private:
-	int energia = 90;
-	int nivelFuria;
-	
-	string tipoZombie;
+	//propiedades o atributos
 	string nombre;
-
-protected:
+	float tamanioAlto;
+	float tamanioAncho;
+	int energiaVida; //resistencia de 10 lanzaquisantes de plantas
 	float posicionX;
-	float posicionY;
-	int direccionX;
-	int direccionY;
+	float posicionY; 
+	string color;
+	string tipoZombi;
 	int velocidad;
+	int nivelFuria;
+	int rangoAtaque;
+	int danio;
+	string habilidad;
+	string recurso;
 
 public:
-	//Contructores
-	Zombie();
-	Zombie(string _nombre);
-	Zombie(string _nombre, int _energia, int _nivelFuria, int _velocidad, float _posicionX, float _posicionY, string _tipoZombie);
+	//metodos o funciones
 
-	//Metodos accesores
-	void setEnergia(int _energia){ energia = _energia; }
-	int getEnergia() { return energia; }
+	//METODOS CONSTRUCTORES------------------------------------------------------
+	Zombi();
+	Zombi(string _nombre);
+	Zombi(string _nombre, int _energiaVida, string _tipoZombi, int _velocidad, int _nivelFuria, int _habilidad);
+	Zombi(string _nombre, float _tamanioAlto, float _tamanioAncho, int _energiaVida, float _posicionX, float _posicionY, string _color, string _tipoZombi, int _velocidad, int _nivelFuria,string _habilidad);
 
-	void setNombre(string _nombre){ nombre = _nombre; }
+	//METODOS ACCESORES (set y get)--------------------------------------------
+	void setNombre(string _nombre) { nombre = _nombre; }
 	string getNombre() { return nombre; }
-	
-	void setNivelFuria(int _nivelFuria){ nivelFuria = _nivelFuria; }
-	int getNivelFuria() { return nivelFuria; }
 
-	void setVelocidad(int _velocidad){ velocidad = _velocidad; }
-	int getVelocidad() { return velocidad; }
+	void setTamanioAlto(float _tamanioAlto) { tamanioAlto = _tamanioAlto; }
+	float getTamanioAlto() { return tamanioAlto; }
 
-	void setPosicionX(float _posicionX){ posicionX = _posicionX; }
+	void setTamanioAncho(float _tamanioAncho) { tamanioAncho = _tamanioAncho; }
+	float getTamanioAncho() { return tamanioAncho; }
+
+	void setEnergiaVida(int _energiaVida) { energiaVida = _energiaVida; }
+	int getEnergiaVida() { return energiaVida; }
+
+	void setPosicionX(float _posicionX) { posicionX = _posicionX; }
 	float getPosicionX() { return posicionX; }
 
-	void setPosicionY(float _posicionY){ posicionY = _posicionY; }
+	void setPosicionY(float _posicionY) { posicionY = _posicionY; }
 	float getPosicionY() { return posicionY; }
 
-	void setTipoZombie(string _tipoZombie){ tipoZombie = _tipoZombie; }
-	string getTipoZombie() { return tipoZombie; }
+	void setColor(string _color) { color = _color; }
+	string getColor() { return color; }
 
+	void setTipoZombi(string _tipoZombi) { tipoZombi = _tipoZombi; }
+	string getTipoZombi() { return tipoZombi; }
 
+	void setVelocidad(int _velocidad) { velocidad = _velocidad; }
+	int getVelocidad() { return velocidad; }
 
-	//Metodos propios
+	void setNivelFuria(int _nivelFuria) { nivelFuria = _nivelFuria; }
+	int getNivelFuria() { return nivelFuria; }
+
+	void setRangoAtaque(int _rangoAtaque) { rangoAtaque = _rangoAtaque; }
+	int getRangoAtaque() { return rangoAtaque; }
+
+	void setDanio(int _danio) { danio = _danio; }
+	int getDanio() { return danio; }
+
+	void setHabilidad(string _habilidad) { habilidad = _habilidad; }
+	string getHabilidad() { return habilidad; }
+
+	void setRecurso(string _recurso) { recurso = _recurso; }
+	string getRecurso() { return recurso; }
+
+	//METODOS PROPIOS O COMUNES--------------------------------------------
 	void moverse();
-	void moverse(float, float);
 	void moverse(float, float, int);
 
 	void atacar();
+	void atacar(string, int, int, int, int, string);
+
+	void aumentarVelocidad();
+	void aumentarVelocidad(float, float, int);
+
+	void recibirDanio();
+	void recibirDanio(int);
+
+	void atacarConRecursos(); //con lazamientos,.....
+	void atacarConRecursos(int, string, string);
+	
+	void realizarHabilidad(); //saltar
+	void realizarHabilidad(int, string);
+	
 	void morir();
-	void morder();
+	void morir(int);
 };
