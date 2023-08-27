@@ -6,36 +6,73 @@ using namespace std;
 class Planta
 {
 private:
-	int energia = 100;
-	int ataque = 10;
-
-	string tipoPlanta;
+	//propiedades o atributos
 	string nombre;
-
-
+	int tamanioAlto;
+	int tamanioAncho;
+	int vida; //resistencia de 5 mordiscos de zombi
+	float posicionX;
+	float posicionY;
+	string color;
+	int costo; //soles
+	string tipoPlanta; //girasol,, lanzaguisantes,.........
+	int rangoAtaque;
+	//int tiempoRecarga;
+	string habilidad;
 
 public:
-	//Contructores
+	//metodos o funciones
+	
+	//METODOS CONSTRUCTORES------------------------------------------------------
 	Planta();
-	Planta(string _nombre);
-	Planta(string _nombre, int _energia, int _ataque, string _tipoPlanta);
+	Planta(string, int, string, string);
 
-	//Metodos accesores
-	void setEnergia(int _energia) { energia = _energia; }
-	int getEnergia() { return energia; }
 
-	void setAtaque(int _ataque) { ataque = _ataque; }
-	int getAtaque() { return ataque; }
-
+	//METODOS ACCESORES (set y get)--------------------------------------------
 	void setNombre(string _nombre) { nombre = _nombre; }
 	string getNombre() { return nombre; }
+
+	void setTamanioAlto(float _tamanioAlto) { tamanioAlto = _tamanioAlto; }
+	int getTamanioAlto() { return tamanioAlto; }
+
+	void setTamanioAncho(float _tamanioAncho) { tamanioAncho = _tamanioAncho; }
+	int getTamanioAncho() { return tamanioAncho; }
+
+	void setVida(int _vida) { vida = _vida; }
+	int getVida() { return vida; }
+
+	void setPosicionX(float _posicionX) { posicionX = _posicionX; }
+	float getPosicionX() { return posicionX; }
+
+	void setPosicionY(float _posicionY) { posicionY = _posicionY; }
+	float getPosicionY() { return posicionY; }
+
+	void setColor(string _color) { color = _color; }
+	string getColor() { return color; }
+
+	void setCosto(int _costo) { costo = _costo; }
+	int getCosto() { return costo; }
 
 	void setTipoPlanta(string _tipoPlanta) { tipoPlanta = _tipoPlanta; }
 	string getTipoPlanta() { return tipoPlanta; }
 
-	//Metodos propios
+	void setRangoAtaque(int _rangoAtaque) { rangoAtaque = _rangoAtaque; }
+	int getRangoAtaque() { return rangoAtaque; }
 
+	void setHabilidad(string _habilidad) { habilidad = _habilidad; }
+	string getHabilidad() { return habilidad; }
+
+	//METODOS PROPIOS O COMUNES--------------------------------------------
+	void definirMovimientoConstante();
+	void definirMovimientoConstante(float, float);
 	void atacar();
+	void defender();
+	void recibirDanio();
+	void crecer();
+	void producirRecursos(); //soles, monedas
+	void realizarHabilidad();
 	void morir();
+	void morir(int); //termina su numero de vidas
 };
+
 
