@@ -13,6 +13,11 @@
 #include "GirasolGenerador.h"
 #include "JuegoPersonalizado.h
 #include "tarjetadeplant"
+#include "AquaticNenufar.h"
+#include "PlantLanzamaiz.h"
+#include "Flowerpot.h"
+#include "ZombieMinero.h"
+
 using namespace std;
 
 int main() {
@@ -83,13 +88,31 @@ int main() {
 	Planta Sunflower;
 	Sunflower.atacar();
 	Sunflower.morir();
-	cout << endl
+	cout << endl;
 		
 	tarjetadeplant carta("PLANTA"); //nombre que llevara la planta
 	cout << "El nombre de la tarjeta de planta es: " << carta.getNombre() << endl;
 	cout << "La forma de la tarjeta es: " << carta.getforma() << endl;
 	cout << "el costo de la tarjeta es: " << carta.getcosto() << endl;
 	cout << "Tiempo de reutilisacion es: " << carta.gettimecarga() << endl;	
+
+		cout << "-------------HERENCIA Y POLIMORFISMO----------- " << endl;
+
+	AquaticNenufar Nenufar;
+	Nenufar.actualizarEstado();
+	cout << endl;
+
+	PlantLanzamaiz LanzaMaiz_1;
+	LanzaMaiz_1.lanzarGuisante();
+	cout << endl;
+	
+	Flowerpot Maceta1;
+	Maceta1.verificarEstado();
+	cout << endl;
+
+	ZombieMinero Minero1;
+	Minero1.atacar();
+	cout << endl;
 	
 	return 0;
 
