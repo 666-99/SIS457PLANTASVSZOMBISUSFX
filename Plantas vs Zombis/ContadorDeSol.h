@@ -1,28 +1,30 @@
 #pragma once
+#include <iostream>
 
-class ContadorDeSol
-{
-private:
-	//propiedades o atributos
+using namespace std;
 
-	char forma; //cuadrado
-	char color; //café 
-	int cantidadSoles;
-
+class contadordesol {
+protected:
+	char colour; //sol amarrillo
+	char forma;//ventana superior lado izquierda
+	int cantidad;
 public:
-	//constructor
-	ContadorDeSol();
+	//Contructores
+	contadordesol();
 
-	//metodos accesores
-	void setForma(char _forma) { forma = _forma; }
-	char getForma() { return forma; }
+	contadordesol(char _colour, char _forma, int _cantidad);
 
-	void setColor(char _color) { color = _color; }
-	char getColor() { return color; }
+	//Metodos accesores
+	void colour(char _colour) { colour = _colour; }
+	char getcolour() { return colour; }
 
-	void setCantidadSoles(int _cantidadSoles) { cantidadSoles = _cantidadSoles; }
-	int getCantidadSoles() { return cantidadSoles; }
+	void setforma(char _forma) { forma = _forma; }
+	char getforma() { return forma; }
 
+	void setcantidad(int _cantidad) { cantidad = _cantidad; }
+	int getcantidad() { return cantidad; }
+
+};
 
 
 
