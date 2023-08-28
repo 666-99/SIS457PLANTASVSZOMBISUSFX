@@ -11,7 +11,8 @@
 #include "SpawnerDeZombi.h"
 #include "GameManager.h"
 #include "GirasolGenerador.h"
-#include "JuegoPersonalizado.h"
+#include "JuegoPersonalizado.h
+#include "tarjetadeplant"
 using namespace std;
 
 int main() {
@@ -82,7 +83,13 @@ int main() {
 	Planta Sunflower;
 	Sunflower.atacar();
 	Sunflower.morir();
-	cout << endl;
+	cout << endl
+		
+	tarjetadeplant carta("PLANTA"); //nombre que llevara la planta
+	cout << "El nombre de la tarjeta de planta es: " << carta.getNombre() << endl;
+	cout << "La forma de la tarjeta es: " << carta.getforma() << endl;
+	cout << "el costo de la tarjeta es: " << carta.getcosto() << endl;
+	cout << "Tiempo de reutilisacion es: " << carta.gettimecarga() << endl;	
 	
 	return 0;
 
